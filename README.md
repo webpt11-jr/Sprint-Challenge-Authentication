@@ -1,4 +1,4 @@
-# Sprint Challenge: Authentication - Dad Jokes #
+## Sprint Challenge: Authentication - Dad Jokes ##
 
 ## Description
 
