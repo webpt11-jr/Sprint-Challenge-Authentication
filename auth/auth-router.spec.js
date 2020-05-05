@@ -16,14 +16,14 @@ describe('router', function() {
         });
 
         it('should add the new user', function() {
-            const payload = { username: "Elmo", password: "giggles" };
+            const payload = { username: "admin3", password: "password3" };
             return request(server).post('/api/auth/register').send(payload).then(res => {
-                expect(res.body.user.username).toBe('Elmo');
+                expect(res.body.user.username).toBe('admin3');
             });
         });
 
         it('should return a status code 201', function() {
-            const payload = { username: "Elmo", password: "giggles" };
+            const payload = { username: "admin3", password: "password3" };
             return request(server).post('/api/auth/register').send(payload).then(res => {
                 expect(res.status).toBe(201);
             });
@@ -32,14 +32,14 @@ describe('router', function() {
 
     describe('POST /api/login', function() {
         it('should log in the user', function() {
-            const payload = { username: "Elmo", password: "giggles" };
+            const payload = { username: "admin3", password: "password3" };
             return request(server).post('/api/auth/login').send(payload).then(res => {
                 expect(res.status).toBe(200);
             });
         });
 
         it('should contain a token', function() {
-            const payload = { username: "Elmo", password: "giggles" };
+            const payload = { username: "admin3", password: "password3" };
             return request(server).post('/api/auth/login').send(payload).then(res => {
                 expect(res.text).toContain("token");
             });

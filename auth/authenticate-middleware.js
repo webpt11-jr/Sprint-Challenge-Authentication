@@ -3,8 +3,8 @@
   before granting access to the next middleware/route handler
 */
 
-const jwt = require('jsonwebtoken');
-const { jwtSecret } = require('../config/secrets.js');
+const jwt = require('jsonwebtoken'); //imports jsonwebtoken
+const { jwtSecret } = require('../config/secrets.js'); //imports secret from config
 
 module.exports = (req, res, next) => {
   const { authorization } = req.headers;
